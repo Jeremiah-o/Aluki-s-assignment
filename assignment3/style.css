@@ -1,0 +1,178 @@
+/* Basic Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Body & Text */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background: #797878;
+}
+
+h1, h2 {
+  margin-bottom: 0.5em;
+}
+
+/* Banner Styling */
+.banner {
+  background: url('images/banner.jpg') center/cover no-repeat;
+  color: #fff;
+  text-align: center;
+  padding: 60px 20px;
+  position: relative;
+}
+
+.banner.small {
+  padding: 40px 20px;
+}
+
+/* Navigation Menu */
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.7);
+  margin-top: 20px;
+}
+
+nav ul li {
+  position: relative;
+}
+
+nav ul li a {
+  color: white;
+  padding: 15px 20px;
+  text-decoration: none;
+  display: block;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+  background: #555;
+}
+
+/* Dropdown Menu */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background: #444;
+  top: 100%;
+  left: 0;
+  min-width: 160px;
+  z-index: 1000;
+}
+
+.dropdown-content li a {
+  padding: 10px 15px;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Main Content Area */
+main {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 0 20px;
+  background: #fff;
+  border-radius: 5px;
+}
+
+.intro, .content {
+  padding: 20px;
+}
+
+/* Lists */
+ul {
+  list-style-type: disc;
+  margin-left: 20px;
+}
+
+/* Gallery Style */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  padding: 20px;
+}
+
+.gallery img {
+  width: calc(33% - 10px);
+  height: auto;
+  border-radius: 5px;
+}
+
+/* Form Styling */
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form label {
+  margin-top: 10px;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+form input[type="text"],
+form input[type="email"],
+form textarea {
+  padding: 8px;
+  font-size: 1em;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+form button {
+  width: 120px;
+  padding: 10px;
+  background: #0066cc;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+form button:hover {
+  background: #004999;
+}
+
+/* Footer Style */
+footer {
+  background: #222;
+  color: #fff;
+  text-align: center;
+  padding: 15px 20px;
+  margin-top: 20px;
+  font-size: 0.9em;
+}
+
+/* Responsive Layout */
+@media (max-width: 800px) {
+  .gallery img {
+    width: calc(50% - 10px);
+  }
+}
+
+@media (max-width: 500px) {
+  nav ul {
+    flex-direction: column;
+  }
+
+  nav ul li {
+    width: 100%;
+    text-align: center;
+  }
+
+  .gallery img {
+    width: 100%;
+  }
+}
